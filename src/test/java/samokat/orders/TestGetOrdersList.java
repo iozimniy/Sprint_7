@@ -1,12 +1,11 @@
 package samokat.orders;
 
-import io.qameta.allure.Step;
 import org.junit.Test;
 
 public class TestGetOrdersList extends samokat.Clients {
 
-    private OrderClient client = new OrderClient();
-    private OrderChecks check = new OrderChecks();
+    private final OrderClient client = new OrderClient();
+    private final OrderChecks check = new OrderChecks();
 
     @Test
     public void testGetOrdersList() {
