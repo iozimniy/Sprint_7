@@ -1,10 +1,10 @@
 package samokat.courier;
 
 import io.restassured.response.ValidatableResponse;
+
 import java.net.HttpURLConnection;
 
 import static org.hamcrest.Matchers.equalTo;
-import static org.junit.Assert.assertEquals;
 
 public class CourierChecks {
     public int assertLoginCourierSuccessfuly(ValidatableResponse login) {
@@ -12,8 +12,7 @@ public class CourierChecks {
                 .assertThat()
                 .statusCode(HttpURLConnection.HTTP_OK)
                 .extract()
-                .path("id")
-        ;
+                .path("id");
         return id;
     }
 
@@ -34,8 +33,7 @@ public class CourierChecks {
                 .assertThat()
                 .statusCode(HttpURLConnection.HTTP_CREATED)
                 .extract()
-                .path("ok")
-        ;
+                .path("ok");
 
         assert created;
     }

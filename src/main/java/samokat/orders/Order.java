@@ -29,15 +29,15 @@ public class Order {
 
 
     public Order(Object[] objects) {
-        this.firstName = (String)objects[0];
-        this.lastName = (String)objects[1];
-        this.address = (String)objects[2];
-        this.metroStation = (String)objects[3];
-        this.phone = (String)objects[4];
-        this.rentTime = (int)objects[5];
-        this.deliveryDate = (String)objects[6];
-        this.comment = (String)objects[7];
-        this.color = (String[])objects[8];
+        this.firstName = (String) objects[0];
+        this.lastName = (String) objects[1];
+        this.address = (String) objects[2];
+        this.metroStation = (String) objects[3];
+        this.phone = (String) objects[4];
+        this.rentTime = (int) objects[5];
+        this.deliveryDate = (String) objects[6];
+        this.comment = (String) objects[7];
+        this.color = (String[]) objects[8];
     }
 
     public String getFirstName() {

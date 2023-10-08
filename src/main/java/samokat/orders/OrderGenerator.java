@@ -4,7 +4,7 @@ public class OrderGenerator {
 
     private static final OrderClient client = new OrderClient();
 
-    private static Object[][] dataOrders = new Object[][]{
+    private static final Object[][] dataOrders = new Object[][]{
             {
                     "Марк Аврелий",
                     "Антонин",
@@ -42,7 +42,7 @@ public class OrderGenerator {
 
     public static void generateOrders() {
         int j = 0;
-        while (j < dataOrders.length-1) {
+        while (j < dataOrders.length - 1) {
             Order order = new Order(dataOrders[j]);
             client.create(order);
             j++;

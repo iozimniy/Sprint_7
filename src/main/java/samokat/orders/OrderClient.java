@@ -11,14 +11,14 @@ public class OrderClient extends samokat.Clients {
         return specForGet()
                 .get(ORDERSLIST_PATH)
                 .then()
-        ;
+                ;
     }
 
     public OrdersList getOrdersList() {
         return specForGet()
                 .get(ORDERSLIST_PATH)
                 .body().as(OrdersList.class)
-        ;
+                ;
     }
 
     public ValidatableResponse create(Order order) {
