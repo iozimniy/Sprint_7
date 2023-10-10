@@ -30,7 +30,7 @@ public class TestLoginCourier {
 
         //проверяем, что авторизация прошла успешно и что id не нулевой
         courierId = checks.assertLoginCourierSuccessfuly(login);
-        assertTrue(courierId != 0);
+        assertTrue("Пришёл id курьера со значением 0", courierId != 0);
     }
 
     //проверяем, что несуществующий курьер не может авторизоваться

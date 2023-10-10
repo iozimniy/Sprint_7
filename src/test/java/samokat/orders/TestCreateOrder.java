@@ -71,6 +71,6 @@ public class TestCreateOrder {
 
         ValidatableResponse response = client.create(order);
         track = checks.assertCreateOrderSuccessfully(response);
-        assertTrue("Track = 0",track != 0);
+        assertTrue("Пришёл track зо значением 0",track != 0);
     }
 }

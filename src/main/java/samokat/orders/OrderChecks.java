@@ -18,7 +18,7 @@ public class OrderChecks {
     }
 
     public static void assertListFull(OrdersList list) {
-        assertTrue(list.getOrders().size() > 0);
+        assertTrue("Список пуст", list.getOrders().size() > 0);
     }
 
     public void assertGetOrdersSuccessfullly(ValidatableResponse response) {
