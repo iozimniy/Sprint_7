@@ -4,6 +4,8 @@ import io.restassured.response.ValidatableResponse;
 
 import java.net.HttpURLConnection;
 
+import static org.junit.Assert.assertTrue;
+
 public class OrderChecks {
 
     static int assertCreateOrderSuccessfully(ValidatableResponse response) {
@@ -16,7 +18,7 @@ public class OrderChecks {
     }
 
     public static void assertListFull(OrdersList list) {
-        assert (list.getOrders().size() > 0);
+        assertTrue(list.getOrders().size() > 0);
     }
 
     public void assertGetOrdersSuccessfullly(ValidatableResponse response) {

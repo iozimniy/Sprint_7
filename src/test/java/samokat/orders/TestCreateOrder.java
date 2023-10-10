@@ -8,6 +8,7 @@ import org.junit.runners.Parameterized;
 import samokat.Clients;
 
 import static io.restassured.RestAssured.given;
+import static org.junit.Assert.assertTrue;
 
 @RunWith(Parameterized.class)
 public class TestCreateOrder {
@@ -70,6 +71,6 @@ public class TestCreateOrder {
 
         ValidatableResponse response = client.create(order);
         track = checks.assertCreateOrderSuccessfully(response);
-        assert track != 0;
+        assertTrue("Track = 0",track != 0);
     }
 }

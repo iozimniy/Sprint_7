@@ -4,6 +4,8 @@ import io.restassured.response.ValidatableResponse;
 import org.junit.After;
 import org.junit.Test;
 
+import static org.junit.Assert.assertTrue;
+
 public class TestLoginCourier {
 
     private final CourierClient client = new CourierClient();
@@ -28,7 +30,7 @@ public class TestLoginCourier {
 
         //проверяем, что авторизация прошла успешно и что id не нулевой
         courierId = checks.assertLoginCourierSuccessfuly(login);
-        assert courierId != 0;
+        assertTrue(courierId != 0);
     }
 
     //проверяем, что несуществующий курьер не может авторизоваться
